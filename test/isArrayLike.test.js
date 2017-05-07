@@ -18,4 +18,12 @@ describe('isArrayLike()', () => {
     };
     expect(_.isArrayLike(nonArrayLikeObj)).toBe(false);
   });
+
+  it('returns true for a string', () => {
+    expect(_.isArrayLike('foo')).toBe(true);
+  });
+
+  it('returns true for the array-like object arguments', () => {
+    expect(_.isArrayLike(arguments)).toBe(true);
+  });
 });

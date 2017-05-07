@@ -23,4 +23,9 @@ describe('filter()', () => {
     const abilityScores = _.filter(characterAttributes, (value) => !isNaN(value));
     expect(abilityScores).toEqual([4, 7, 10, 16, 5, 4]);
   });
+
+  it('will return the original array if no callback function is supplied', () => {
+    const nums = [1, 2, 3];
+    expect(_.filter(nums)).toEqual(nums);
+  })
 });

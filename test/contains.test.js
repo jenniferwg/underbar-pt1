@@ -31,4 +31,15 @@ describe('contains()', () => {
     expect(_.contains(ponies, 'Applejack')).toBe(false);
   });
 
+  it('returns true if the target value is among the values of an object with numeric keys', () => {
+    const schedule = {
+      1: 'math',
+      2: 'history',
+      3: 'english',
+      4: 'math',
+      5: 'law',
+    };
+    expect(_.contains(schedule, 'law')).toBe(true);
+  });
+
 });

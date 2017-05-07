@@ -39,5 +39,19 @@ describe('each()', () => {
     });
     expect(count).toBe(3);
   });
+
+  it('iterates every property on a non-array-like object with numberic keys [...]', () => {
+    const obj = {
+      1: 'woop',
+      2: 'dee',
+      3: 'doo',
+    };
+    let count = 0;
+    _.each(obj, function(value, key, iteratedObj) {
+      expect(value).toEqual(iteratedObj[key]);
+      count += 1;
+    });
+    expect(count).toBe(3);
+  });
 });
 

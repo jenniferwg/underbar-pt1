@@ -18,4 +18,10 @@ describe('reject()', () => {
     const orderItems = _.reject(order, (value) => value === null);
     expect(orderItems).toEqual(['burger', 'ketchup', 'cookie']);
   });
+
+  it('rejects everything if no callback function is supplied', () => {
+    const nums = [1, 2, 3];
+    expect(_.reject(nums)).toEqual([]);
+  });
+
 });

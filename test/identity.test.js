@@ -20,4 +20,8 @@ describe('identity()', () => {
     };
     expect(_.identity(val)).toBe(val);
   });
+
+  it('returns null if given the number zero', () => {
+    expect(_.identity(0)).toBe(0);
+  });
 });

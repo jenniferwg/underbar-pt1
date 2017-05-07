@@ -13,4 +13,10 @@ describe('reduce()', () => {
     expect(result).toEqual(15);
   });
 
+  it('reduces an array of booleans', () => {
+    const truths = [true, false, false];
+    const result = _.reduce(truths, (ultimateTruth, current) => ultimateTruth || current);
+    expect(result).toEqual(true);
+  });
+
 });
